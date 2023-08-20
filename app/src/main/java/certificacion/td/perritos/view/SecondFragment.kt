@@ -65,8 +65,9 @@ class SecondFragment : Fragment() {
             }
         }
 
-        //hacer boton borrar todo
-        //con un longclick se podría borrar de a un favorito
+        binding.btborrar.setOnClickListener {
+            viewModel.deleteAllFavourites()
+        }
 
     }
 
