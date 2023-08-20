@@ -10,21 +10,26 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "certificacion.td.perritos"
+        applicationId "certificacion.td.perritos"// nombre de la app para lanzamiento
         minSdk 29
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 1 //numero interno de desarrollo
+        versionName "1.0" //numero de lanzamiento, lo puede ver el user
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            //true para reducir codigo, ofuscar y optimizar
+            minifyEnabled true
+            //comprimir codigo
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
